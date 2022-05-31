@@ -47,7 +47,7 @@ $p$ is an integer between 1 and 4, $q$ is either 0 or 1, and $E$ is the reversal
 $$  \tau_{m}(V_m)\frac{dm}{dt} = m_{i,\infty}(V_m) - m $$
 $$ \tau_{h}(V_m)\frac{dh}{dt} = h_{i,\infty}(V_m) - h $$
 
-* The AMPA and GABA connectivities $ \frac{s_{AMPA}{dt} $, $ \frac{s_{GABA_A}{dt} $, $ \frac{s_{GABA_B}{dt} $. 
+* The AMPA and GABA connectivities $$ \frac{s_{AMPA}{dt} $$, $$ \frac{s_{GABA_A}{dt} $$, $$ \frac{s_{GABA_B}{dt} $$. 
 
 * The plasticity rule used
 
@@ -62,11 +62,11 @@ Note: j=1-> presynaptic cell ; j = 2-> inhibitory cell ; j = 3-> postsynaptic ce
 
 ## Data acquisition
 
-* *Simu_scenario* and *model_scenario* for **Figure 1B**
-* *Simu_STDP_..* and *model_STDP_..* for **Figure 2C**
-* *Simu_SJO_..* and *model_SJO_..* for **Figure 2C**
-* *Simu_BurstMAT_..* and *model_BurstMAT_..* for **Figure 3A**
-* *Simu_????????????_..* and *model_STDP_..* for **Figure 3B**
-* *Simu_network* and *model_network* for **Figure 3C**
+* *Simu_scenario* and *model_scenario* used to simulate the scenario of **Figure 1B** with Triplet model.
+* *Simu_STDP_..* and *model_STDP_..* used for **Figure 2C** (reproducing the experimental pairing protocol of Bi and Poo, 1998)
+* *Simu_SJO_..* and *model_SJO_..* used for **Figure 2C** (reproducing the experimental pairing protocol of Sjöström et. al., 2001)
+* *Simu_BurstMAT_..* and *model_BurstMAT_..* for **Figure 3A** (simulating the homeostatic reset and saturation for each plasticity rule. Note that for phenomenological models (pair-based and triplet) hard bounds and soft bounds are applied with parameter SB = 0 and SB = 1. )
+* *Simu_????????????_..* and *model_STDP_..* for **Figure 3B** (simulating 10 different networks with different ionic conductances (10% variability) for each cell.) 
+* *Simu_network* and *model_network* for **Figure 3C** (simulating a 6cells feedforward network with 3 presynaptic cells connected to 3 postsynaptic cells governed by the same inhibitory cell. All initial synaptic weights between pre-post cells are randomly initialized and cells show 30% variability in their $g_{CaT}$ and $g_{KCa} conductances.)
 
 # Matlab
