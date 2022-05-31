@@ -33,7 +33,8 @@ All computational experiments are launched thanks to a *Simu_... .jl* calling a 
 
 #### Functions for the differential equations of...
 * The membrane voltage, $V_m$, 
-$ C_{m} \frac{V_{m}}{dt} = -\sum I + I_{app} $
+
+$$ C_{m} \frac{V_{m}}{dt} = -\sum I + I_{app} $$
  
 where $C_m$ is the membrane capacitance, $I$ is the $i$-th current due to ionic channels $i$, $I_{app}$ is an external applied current. Ionic currents are voltage-dependent; they are expressed as follow:
 
@@ -47,7 +48,7 @@ $p$ is an integer between 1 and 4, $q$ is either 0 or 1, and $E$ is the reversal
 $$  \tau_{m}(V_m)\frac{dm}{dt} = m_{i,\infty}(V_m) - m $$
 $$ \tau_{h}(V_m)\frac{dh}{dt} = h_{i,\infty}(V_m) - h $$
 
-* The AMPA and GABA connectivities $$ \frac{s_{AMPA}{dt} $$, $$ \frac{s_{GABA_A}{dt} $$, $$ \frac{s_{GABA_B}{dt} $$. 
+* The AMPA and GABA connectivities $$ \frac{s_{AMPA}}{dt} $$, $$ \frac{s_{GABA_A}}{dt} $$, $$ \frac{s_{GABA_B}}{dt} $$. 
 
 * The plasticity rule used
 
