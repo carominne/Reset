@@ -31,6 +31,35 @@ All computational experiments are launched thanks to a *Simu_... .jl* calling a 
 
 ## model_ ... . jl (ODEs)
 
+#### Functions for the differential equations of...
+* The membrane voltage, $V_m$, 
+$ C_{m} \frac{V_{m}}{dt} = -\sum I + I_{app} $
+ 
+where $C_m$ is the membrane capacitance, $I$ is the $i$-th current due to ionic channels $i$, $I_{app}$ is an external applied current. Ionic currents are voltage-dependent; they are expressed as follow:
+
+$$ I = g m^{p}(V_m) h^{q}(V_m) (V_m - E)  $$
+
+where $g$ is the maximal conductance, $m$ is the activation variable, $h$ is the inactivation variable,
+$p$ is an integer between 1 and 4, $q$ is either 0 or 1, and $E$ is the reversal potential of the channel.
+
+* The activation and inactivation variables m and p: 
+
+$$  \tau_{m}(V_m)\frac{dm}{dt} = m_{i,\infty}(V_m) - m $$
+$$ \tau_{h}(V_m)\frac{dh}{dt} = h_{i,\infty}(V_m) - h $$
+
+* The AMPA and GABA connectivities $ \frac{s_{AMPA}{dt} $, $ \frac{s_{GABA_A}{dt} $, $ \frac{s_{GABA_B}{dt} $. 
+
+* The plasticity rule used
+
+$$ \frac{dw}{dt} = ... $$
+
+(see Methods and Supplementary Materials for more information)
+
+#### function_ ...
+
+A function simulating the computational experiment and simulating the ODEs above with Euler explicit method for each time step *z* and each cell *j*. 
+Note: j=1-> presynaptic cell ; j = 2-> inhibitory cell ; j = 3-> postsynaptic cell.
+
 ## Data acquisition
 
 * *Simu_scenario* and *model_scenario* for **Figure 1B**
